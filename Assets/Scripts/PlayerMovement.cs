@@ -38,14 +38,28 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (isGrounded())
         {
-           rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            if (context.performed)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            }
+            else if (context.canceled)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
         }
-        else if (context.canceled)
+        
+    }
+
+    private bool isGrounded()
+    {
+        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0f, groundLayer))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            return true;
         }
+        return false;
+
     }
 
     private void OnDrawGizmosSelected()
