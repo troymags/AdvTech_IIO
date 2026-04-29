@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 06ed2b88446c54edc8c34e2541d77a78
+guid: d37d7c081be3848f9805dd0f7374841c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3257179606766823313
-    second: CubeBoy-Moving_0
+      213: 7510811954125166164
+    second: CubeZombie-Moving-Sheet_0
   - first:
-      213: -4861102773023831689
-    second: CubeBoy-Moving_1
+      213: -6722031629122832353
+    second: CubeZombie-Moving-Sheet_1
   - first:
-      213: -4526696347176142850
-    second: CubeBoy-Moving_2
+      213: -145940566332950944
+    second: CubeZombie-Moving-Sheet_2
   - first:
-      213: -5354303943593812889
-    second: CubeBoy-Moving_3
+      213: -5042222235146403406
+    second: CubeZombie-Moving-Sheet_3
   - first:
-      213: -2748082311250756413
-    second: CubeBoy-Moving_4
+      213: 3986834884714691377
+    second: CubeZombie-Moving-Sheet_4
   - first:
-      213: -189789604942034193
-    second: CubeBoy-Moving_5
+      213: -9103778979082310179
+    second: CubeZombie-Moving-Sheet_5
   - first:
-      213: -7261496038890174637
-    second: CubeBoy-Moving_6
+      213: -3072961034163190720
+    second: CubeZombie-Moving-Sheet_6
   - first:
-      213: 6457250888977689633
-    second: CubeBoy-Moving_7
+      213: 6593532526809927626
+    second: CubeZombie-Moving-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CubeBoy-Moving_0
+      name: CubeZombie-Moving-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f685409a76c2cc2d0800000000000000
-      internalID: -3257179606766823313
+      spriteID: 4565364ada3cb3860800000000000000
+      internalID: 7510811954125166164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_1
+      name: CubeZombie-Moving-Sheet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7798f3d78c4e98cb0800000000000000
-      internalID: -4861102773023831689
+      spriteID: f18713129db86b2a0800000000000000
+      internalID: -6722031629122832353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_2
+      name: CubeZombie-Moving-Sheet_2
       rect:
         serializedVersion: 2
         x: 32
@@ -180,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7f18cd7a1fd21c0800000000000000
-      internalID: -4526696347176142850
+      spriteID: 066b76104d389fdf0800000000000000
+      internalID: -145940566332950944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_3
+      name: CubeZombie-Moving-Sheet_3
       rect:
         serializedVersion: 2
         x: 48
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76c1e9e7ee0b1b5b0800000000000000
-      internalID: -5354303943593812889
+      spriteID: 2b1c58b879d660ab0800000000000000
+      internalID: -5042222235146403406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_4
+      name: CubeZombie-Moving-Sheet_4
       rect:
         serializedVersion: 2
         x: 64
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cc3d58a2b9dcd9d0800000000000000
-      internalID: -2748082311250756413
+      spriteID: 13bfd895435145730800000000000000
+      internalID: 3986834884714691377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_5
+      name: CubeZombie-Moving-Sheet_5
       rect:
         serializedVersion: 2
         x: 80
@@ -246,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fea4e5f1c5bbd5df0800000000000000
-      internalID: -189789604942034193
+      spriteID: ddd612e9041e8a180800000000000000
+      internalID: -9103778979082310179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_6
+      name: CubeZombie-Moving-Sheet_6
       rect:
         serializedVersion: 2
         x: 96
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3578b0063dbf93b90800000000000000
-      internalID: -7261496038890174637
+      spriteID: 044061e7836aa55d0800000000000000
+      internalID: -3072961034163190720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeBoy-Moving_7
+      name: CubeZombie-Moving-Sheet_7
       rect:
         serializedVersion: 2
         x: 112
@@ -290,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12c2717b873cc9950800000000000000
-      internalID: 6457250888977689633
+      spriteID: acf4d7b26eee08b50800000000000000
+      internalID: 6593532526809927626
       vertices: []
       indices: 
       edges: []
@@ -300,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e0d156c0822c64365a5ebed1f1aa29e6
+    spriteID: bfc51383ebdea4d8187e05942d1a9bcd
     internalID: 0
     vertices: []
     indices: 
@@ -312,14 +312,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      CubeBoy-Moving_0: -3257179606766823313
-      CubeBoy-Moving_1: -4861102773023831689
-      CubeBoy-Moving_2: -4526696347176142850
-      CubeBoy-Moving_3: -5354303943593812889
-      CubeBoy-Moving_4: -2748082311250756413
-      CubeBoy-Moving_5: -189789604942034193
-      CubeBoy-Moving_6: -7261496038890174637
-      CubeBoy-Moving_7: 6457250888977689633
+      CubeZombie-Moving-Sheet_0: 7510811954125166164
+      CubeZombie-Moving-Sheet_1: -6722031629122832353
+      CubeZombie-Moving-Sheet_2: -145940566332950944
+      CubeZombie-Moving-Sheet_3: -5042222235146403406
+      CubeZombie-Moving-Sheet_4: 3986834884714691377
+      CubeZombie-Moving-Sheet_5: -9103778979082310179
+      CubeZombie-Moving-Sheet_6: -3072961034163190720
+      CubeZombie-Moving-Sheet_7: 6593532526809927626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
