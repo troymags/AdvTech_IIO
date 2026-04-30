@@ -9,17 +9,26 @@ public class GameManager : MonoBehaviour
     public GameObject loadCanvas;
     public List<GameObject> levels;
     private int currentLevelIndex = 0;
+
+    public coupleQuestion coupleQuestion;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         HoldToLoadLevel.OnLevelLoad += LoadNextLevel;
-        loadCanvas.SetActive(true);
+        loadCanvas.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (coupleQuestion.coupleDetected)
+        {
+            loadCanvas.SetActive(true);
+        }
+        else
+        {
+            loadCanvas.SetActive(false);
+        }
     }
 
     void LoadNextLevel()
