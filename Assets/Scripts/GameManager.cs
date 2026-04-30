@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player;
+   // public GameObject player;
     public GameObject questionCanvas;
     public List<GameObject> levels;
     private int currentLevelIndex = 0;
@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        HoldToLoadLevel.OnLevelLoad += LoadNextLevel;
-        HoldToLoadLevel.OnAnswerSubmitted += EnablePlayerMovement;
+        /*HoldToLoadLevel.OnLevelLoad += LoadNextLevel;
+        HoldToLoadLevel.OnAnswerSubmitted += EnablePlayerMovement;*/
 
         questionCanvas.SetActive(false);
         coupleQuestion = FindFirstObjectByType<coupleQuestion>();
@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour
             questionDisplayed = false;
             SetPlayerMovement(true);
         }
+    }
+
+    public void LoadNextLevelFromAnswer()
+    {
+        SetPlayerMovement(true);
+        LoadNextLevel();
     }
 
     private void ShowQuestion()
@@ -62,10 +68,10 @@ public class GameManager : MonoBehaviour
     }
 }
 
-    private void EnablePlayerMovement()
+   /* private void EnablePlayerMovement()
     {
         SetPlayerMovement(true);
-    }
+    }*/
 
     void LoadNextLevel()
     {
@@ -74,7 +80,11 @@ public class GameManager : MonoBehaviour
         levels[currentLevelIndex].gameObject.SetActive(false);
         levels[nextlevelIndex].gameObject.SetActive(true);
 
-        player.transform.position = new Vector3(-8.5f, -1.5f, 0f);
+        PlayerMovement[] allPlayers = FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
+        for (int i = 0; i < allPlayers.Length; i++)
+        {
+        allPlayers[i].transform.position = new Vector3(-8.5f + (i * 1f), -1.5f, 0f);
+        } 
 
         currentLevelIndex = nextlevelIndex;
 

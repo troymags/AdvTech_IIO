@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isDead())
         {
-            player.transform.position = new Vector3(-8.5f, -1.5f, 0f);
+            transform.position = new Vector3(-8.5f, -1.5f, 0f);
         }
     }
     

@@ -5,16 +5,23 @@ public class ReadInput : MonoBehaviour
     private string answerInput;
 
     public GameObject questionCanvas;
+    public GameManager gameManager; 
 
-    public void readStringInput(string answer)
+   public void readStringInput(string answer)
+{
+    answerInput = answer;
+    Debug.Log("Input Received: " + answerInput);
+
+    if (!string.IsNullOrWhiteSpace(answerInput))
     {
-        answerInput = answer;
-        Debug.Log("Input Received: " + answerInput);
-
-        if (!string.IsNullOrWhiteSpace(answerInput))
-        {
-            HoldToLoadLevel.TriggerAnswerSubmitted();
-            questionCanvas.SetActive(false);
-        }
+        StartCoroutine(TransitionAfterDelay(1.5f));
     }
+}
+
+private System.Collections.IEnumerator TransitionAfterDelay(float seconds)
+{
+    yield return new WaitForSeconds(seconds);
+    questionCanvas.SetActive(false);
+    gameManager.LoadNextLevelFromAnswer();
+}
 }
