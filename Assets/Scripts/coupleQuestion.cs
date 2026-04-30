@@ -43,6 +43,11 @@ public class coupleQuestion : MonoBehaviour
                 Debug.Log("Player Exited Zone. Current Count: " + playerCount);
                 playersInZone.Remove(collision.gameObject);
             }
+
+            if (playersInZone.Count < 2)
+            {   
+                coupleDetected = false;
+            }
         }
     }
 

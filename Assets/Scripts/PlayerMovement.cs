@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject player;
 
+    public bool canMove = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,25 +61,31 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void Move(InputAction.CallbackContext context)
+{
+    if (!canMove)
     {
-        horizontalMove = context.ReadValue<Vector2>().x;
+        horizontalMove = 0;
+        return;
     }
+    horizontalMove = context.ReadValue<Vector2>().x;
+}
 
-    public void Jump(InputAction.CallbackContext context)
+public void Jump(InputAction.CallbackContext context)
+{
+    if (!canMove) return;
+
+    if (isGrounded())
     {
-        if (isGrounded())
+        if (context.performed)
         {
-            if (context.performed)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            }
-            else if (context.canceled && rb.linearVelocity.y > 0)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-            }
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
-        
+        else if (context.canceled && rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        }
     }
+}
 
     private bool isGrounded()
     {
@@ -105,4 +113,3 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
     }
 }
-

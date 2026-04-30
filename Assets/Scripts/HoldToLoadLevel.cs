@@ -5,15 +5,31 @@ using System;
 
 public class HoldToLoadLevel : MonoBehaviour
 {
-
     public float holdDuration = 1f;
     public Image fillImage;
+    public GameObject loadCanvas; 
 
     private float holdTimer = 0f;
     private bool isHolding = false;
 
     public static event Action OnLevelLoad;
-    // Update is called once per frame
+    public static event Action OnAnswerSubmitted;
+
+    void OnEnable()
+    {
+        OnAnswerSubmitted += EnableLoadCanvas;
+    }
+
+    void OnDisable()
+    {
+        OnAnswerSubmitted -= EnableLoadCanvas;
+    }
+
+    void Start()
+    {
+        if (loadCanvas != null) loadCanvas.SetActive(false);
+    }
+
     void Update()
     {
         if (isHolding)
@@ -23,8 +39,8 @@ public class HoldToLoadLevel : MonoBehaviour
 
             if (holdTimer >= holdDuration)
             {
-              OnLevelLoad.Invoke();
-              ResetHold();
+                OnLevelLoad.Invoke();
+                ResetHold();
             }
         }
         else
@@ -34,16 +50,20 @@ public class HoldToLoadLevel : MonoBehaviour
         }
     }
 
+    public static void TriggerAnswerSubmitted()
+    {
+    OnAnswerSubmitted?.Invoke();
+    }
+
+    private void EnableLoadCanvas()
+    {
+        if (loadCanvas != null) loadCanvas.SetActive(true);
+    }
+
     public void OnHold(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            isHolding = true;
-        }
-        else if (context.canceled)
-        {
-            ResetHold();
-        }
+        if (context.started) isHolding = true;
+        else if (context.canceled) ResetHold();
     }
 
     private void ResetHold()
